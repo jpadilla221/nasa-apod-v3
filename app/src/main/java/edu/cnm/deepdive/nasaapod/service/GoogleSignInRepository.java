@@ -53,7 +53,7 @@ private GoogleSignInRepository() {
       .addOnFailureListener(this::update);
 
   }
-  private void startSignIn(Activity activity, int requestCode) {
+  public void startSignIn(Activity activity, int requestCode) {
   update((GoogleSignInAccount) null);
   Intent intent = client.getSignInIntent();
   activity.startActivityForResult(intent, requestCode);
